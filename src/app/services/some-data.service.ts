@@ -13,8 +13,8 @@ export class SomeDataService {
     private otherServiceService: OtherServiceService
   ) { }
 
+  // those decorators works only if //    "experimentalDecorators": true, commented
   @logWithPrefix({ prefix: 'TEST---PREFIX', data: { someInner: 77 }})
-  // @bound
   write(arg?: string) {
     this.otherServiceService.writeSmth(arg)
   }
